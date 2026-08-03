@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Royal Auto — Drive Royal. Drive Excellence.</title>
+<link rel="icon" type="image/png" href="/uploads/logo.png" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="/">
+      <img src="/uploads/logo.png" alt="Royal Auto crest" onerror="this.style.display='none'" />
+      <div class="brand-text">
+        <span class="name">ROYAL <span class="auto">AUTO</span></span>
+        <span class="tagline">Drive Royal. Drive Excellence.</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#listings" class="active" data-i18n="nav_inventory">Inventory</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="/admin" class="btn-admin-link" data-i18n="nav_admin">Admin</a>
+      <div class="lang-toggle">
+        <button data-lang-btn="en">EN</button>
+        <button data-lang-btn="fr">FR</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow" data-i18n="hero_eyebrow">Curated Pre-Owned &amp; New Arrivals</div>
+    <h1><span data-i18n="hero_title_1">Find your next car,</span><br><span class="accent" data-i18n="hero_title_2">fit for royalty.</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Every listing is handled personally — browse the inventory, then reach out directly to talk details and make the deal.</p>
+
+    <div class="search-panel">
+      <div class="field">
+        <label for="q" data-i18n="search_label">Search</label>
+        <input type="text" id="q" data-i18n-placeholder="search_placeholder" placeholder="Brand, model, keyword…" />
+      </div>
+      <div class="field">
+        <label for="brand" data-i18n="brand_label">Brand</label>
+        <select id="brand"><option value="" data-i18n="brand_all">All brands</option></select>
+      </div>
+      <div class="field">
+        <label for="maxPrice" data-i18n="maxprice_label">Max price</label>
+        <input type="number" id="maxPrice" data-i18n-placeholder="any" placeholder="Any" min="0" />
+      </div>
+      <div class="field">
+        <label for="minYear" data-i18n="minyear_label">Min year</label>
+        <input type="number" id="minYear" data-i18n-placeholder="any" placeholder="Any" min="1970" max="2030" />
+      </div>
+      <button class="btn btn-gold" id="searchBtn" data-i18n="search_btn">Search</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="listings">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-i18n="current_inventory">Current Inventory</h2>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div class="divider"><span class="mark"></span></div>
+
+<section class="section" id="contact">
+  <div class="container" style="text-align:center;">
+    <h2 data-i18n="contact_title">Looking for something specific?</h2>
+    <p style="max-width:520px;margin:0 auto 24px;" data-i18n="contact_sub">Message Royal Auto directly and we'll help you track down the right car.</p>
+    <a class="btn btn-outline" id="generalContact" href="#" data-i18n="contact_btn">Contact Royal Auto</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="gold">ROYAL AUTO</span> — Drive Royal. Drive Excellence.
+  </div>
+</footer>
+
+<!-- Car detail modal -->
+<div class="modal-overlay" id="detailOverlay">
+  <div class="modal" id="detailModal"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="/js/i18n.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
